@@ -325,7 +325,7 @@
         "LoginResponse": {
             "type": "object",
             "properties": {
-            "access_token":{
+            "token":{
                 "type": "string",
                 "description": "Access token (needed for all requests), life time 1 hour",
                 "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmMyMDg1YmQwOTM2NTI4MTA3Y2UyNzQiLCJzaWQiOiI1ZmMyZDJmY2UxZDIwNTA2NzAyYmRkMjIiLCJpYXQiOjE2MDY2MDM1MTYsImV4cCI6MTYwNjYwNzExNn0.rJ_QjU4KvA76H96RHsvOBChK0Vjbd0NmqjMxdQVJIXA"
@@ -334,11 +334,11 @@
         },
         "LogoutRequest": {
             "required": [
-            "access_token"
+            "token"
             ],
             "type": "object",
             "properties": {
-            "access_token": {
+            "token": {
                 "type": "string",
                 "description": "User's access_token. This token need add to headers Authorization: Bearer token",
                 "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTk0YjdkYzJiMzE2NGY5MjQ4ODNjYyIsImlhdCI6MTYzNzQzNjgyNywiZXhwIjoxNjM3NDQwNDI3fQ.C-oGS_NLFxd4A7AfysfWcW9SJP1kAleytL7MYclP4Y4"
