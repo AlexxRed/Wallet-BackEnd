@@ -285,15 +285,15 @@
                 "name"
             ],
             "properties": {
+            "id": {
+                "type": "string",
+                "description": "User's id",
+                "example": "1asd21231dsa213sda"
+            },
             "email": {
                 "type": "string",
                 "description": "User's email",
                 "format": "email"
-            },
-            "id": {
-                "type": "number",
-                "description": "User's id",
-                "example": "14235678945624"
             },
             "name": {
                 "type": "string",
