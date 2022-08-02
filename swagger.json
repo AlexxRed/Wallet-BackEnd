@@ -111,16 +111,12 @@
         }
         },
         "/api/auth/logout": {
-        "post": {
+        "get": {
             "tags": [
             "Auth"
             ],
             "summary": "Logout",
-            "security": [
-            {
-                "Bearer": []
-            }
-            ],
+            "security": [{ "Bearer": [] }],
             "parameters": [],
             "requestBody": {
             "description": "Empty request",
@@ -507,7 +503,6 @@
             }
             }
         }
-    }
     },
     "securitySchemes": {
         "Bearer": {
@@ -516,4 +511,6 @@
             "bearerFormat": "JWT"
         }
     }
+    }
+    
 }
