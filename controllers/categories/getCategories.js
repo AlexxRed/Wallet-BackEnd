@@ -1,13 +1,11 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const categoriesPath = path.join(__dirname, "../../models/categories.js");
+const categoriesPath = path.join(__dirname, "../../models/categories.json");
 
-const getCetegories = async () => {
-  const contacts = await fs.readFile(categoriesPath, "utf-8");
-  return JSON.parse(contacts);
+const getCategories = async (req, res, next) => {
+  const result = await fs.readFile(categoriesPath, "utf-8");
+  res.json(result);
 };
 
-module.exports = {
-  getCetegories,
-};
+module.exports = getCategories;
