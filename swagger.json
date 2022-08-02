@@ -30,7 +30,7 @@
         }
     ],
     "paths": {
-        "/api/users/signup": {
+        "/api/auth/users/signup": {
         "post": {
             "tags": [
             "Auth"
@@ -70,7 +70,7 @@
             }
         }
         },
-        "/api/users/login": {
+        "/api/auth/users/login": {
         "post": {
             "tags": [
             "Auth"
@@ -110,7 +110,7 @@
             }
         }
         },
-        "/api/logout": {
+        "/api/auth/logout": {
         "post": {
             "tags": [
             "Auth"
@@ -159,7 +159,7 @@
             }
         }
         },
-        "/api/current": {
+        "/api/auth/current": {
         "get": {
             "tags": [
             "Auth"
