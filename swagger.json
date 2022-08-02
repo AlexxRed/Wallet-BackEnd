@@ -120,14 +120,7 @@
             "parameters": [],
             "requestBody": {
             "description": "Empty request",
-            "required": false,
-            "content": {
-                "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/LogoutRequest"
-                }
-                }
-            }
+            "required": false     
             },
             "responses": {
             "204": {
@@ -331,15 +324,7 @@
         "LogoutRequest": {
             "required": [
             "token"
-            ],
-            "type": "object",
-            "properties": {
-            "token": {
-                "type": "string",
-                "description": "User's access_token. This token need add to headers Authorization: Bearer token",
-                "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOTk0YjdkYzJiMzE2NGY5MjQ4ODNjYyIsImlhdCI6MTYzNzQzNjgyNywiZXhwIjoxNjM3NDQwNDI3fQ.C-oGS_NLFxd4A7AfysfWcW9SJP1kAleytL7MYclP4Y4"
-            }
-            }
+            ]
         },
         "LogoutResponse": {
             "type": "object",
