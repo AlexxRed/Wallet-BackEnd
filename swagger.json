@@ -154,15 +154,12 @@
             "Auth"
             ],
             "summary": "Get info about user",
-            "security": [
-            {
-                "Bearer": []
-            }
+            "security": [{ "Bearer": [] }
             ],
             "parameters": [],
             "requestBody": {
             "description": "About user object",
-            "required": true,
+            "required": false,
             "content": {
                 "application/json": {
                 "schema": {
@@ -337,23 +334,9 @@
             }
         },
         "CurrentRequest": {
-            "type": "object",
-            "required": [
-                "email",
-                "name"
-            ],
-            "properties": {
-            "email": {
-                "type": "string",
-                "description": "User's email",
-                "format": "email"
-            },
-            "name": {
-                "type": "string",
-                "description": "User's name",
-                "example": "John"
-            }
-            }
+        "required": [
+            "token"
+            ]
         },
         "CurrentResponse": {
             "type": "object",
