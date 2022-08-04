@@ -618,9 +618,10 @@
               "example": 500
             },
             "type": {
-              "type": "string",
-              "description": "Transaction's type",
-              "example": "+"
+
+                "type": "string",
+                "description": "Transaction's type",
+                "example": "income/expense"
             },
             "category": {
               "type": "string",
