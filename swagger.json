@@ -479,6 +479,11 @@
             "type": "string",
             "description": "User's name",
             "example": "John"
+          },
+          "id": {
+            "type": "string",
+            "description": "User's id",
+            "example": "123hndsadaJo231dsa1"
           }
         }
       },
