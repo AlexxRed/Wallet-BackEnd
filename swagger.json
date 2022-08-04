@@ -500,7 +500,7 @@
           "type": {
             "type": "string",
             "description": "Transaction's type",
-            "example": "+"
+            "example": "income/expense"
           },
           "category": {
             "type": "string",
