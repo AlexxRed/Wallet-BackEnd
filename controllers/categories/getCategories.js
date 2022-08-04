@@ -5,7 +5,8 @@ const categoriesPath = path.join(__dirname, "../../models/categories.json");
 
 const getCategories = async (req, res, next) => {
   const result = await fs.readFile(categoriesPath, "utf-8");
-  res.json(result);
+  const jsonResult = JSON.parse(result);
+  res.json({ ...jsonResult });
 };
 
 module.exports = getCategories;
