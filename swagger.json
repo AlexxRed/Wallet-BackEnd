@@ -545,7 +545,7 @@
           "type": {
             "type": "string",
             "description": "Transaction's type",
-            "example": "+"
+            "example": "income"
           },
           "category": {
             "type": "string",
