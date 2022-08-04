@@ -30,11 +30,14 @@ const userSchema = new Schema(
 const User = model("user", userSchema);
 
 const joiUserRegisterSchema = Joi.object({
-  name: Joi.string().min(3).max(30).required(),
+  name: Joi.string().min(1).max(12).required(),
   email: Joi.string()
+    .min(10)
+    .max(63)
+    .required()
     .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
     .pattern(emailRegexp),
-  password: Joi.string().min(8),
+  password: Joi.string().min(6).max(16),
   repeat_password: Joi.ref("password"),
 });
 

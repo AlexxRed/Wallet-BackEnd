@@ -10,7 +10,7 @@ const transactionSchema = new Schema(
         },
         type: {
             type: String,
-            enum: ["+", "-"],
+            enum: ["income ", "expense"],
             require: true,
         },
         category: {
