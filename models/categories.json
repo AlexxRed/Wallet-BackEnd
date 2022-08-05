@@ -1,22 +1,38 @@
 [
   {
     "id": "1",
-    "name": "sdgsdg"
+    "name": "Basic expenses"
   },
     {
     "id": "2",
-    "name": "sdgsdg"
+    "name": "Products"
   },
     {
     "id": "3",
-    "name": "sdgsdg"
+    "name": "Car"
   },
     {
     "id": "4",
-    "name": "sdgsdg"
+    "name": "Self care"
+  },
+  {
+    "id": "5",
+    "name": "Child care"
   },
     {
-    "id": "5",
-    "name": "sdgsdg"
+    "id": "6",
+    "name": "Household products"
+  },
+      {
+    "id": "7",
+    "name": "Education" 
+  },  
+    {
+    "id": "8",
+    "name": "Leisure"
+  },
+    {
+    "id": "9",
+    "name": "Other expenses"
   }
 ]
