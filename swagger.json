@@ -153,15 +153,8 @@
         "security": [{ "Bearer": [] }],
         "parameters": [],
         "requestBody": {
-          "description": "About user object",
-          "required": false,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CurrentRequest"
-              }
-            }
-          }
+          "description": "Empty request",
+          "required": false
         },
         "responses": {
           "200": {
@@ -253,7 +246,7 @@
         ],
 
         "responses": {
-          "200": {
+          "201": {
             "description": "Successful operation",
             "content": {
               "application/json": {
