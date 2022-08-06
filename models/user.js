@@ -23,6 +23,9 @@ const userSchema = new Schema(
       type: String,
       default: "",
     },
+    balance: {
+      type: Number,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -39,6 +42,7 @@ const joiUserRegisterSchema = Joi.object({
     .pattern(emailRegexp),
   password: Joi.string().min(6).max(16),
   repeat_password: Joi.ref("password"),
+  balance: Joi.number(),
 });
 
 const joiUserLoginSchema = Joi.object({

@@ -404,6 +404,11 @@
             "type": "string",
             "description": "User's name",
             "example": "John"
+          },
+          "balance": {
+            "type": "number",
+            "description": "User's balance",
+            "example": "0"
           }
         }
       },
@@ -467,7 +472,12 @@
             "type": "string",
             "description": "User's id",
             "example": "123hndsadaJo231dsa1"
-          }
+          },
+                      "balance": {
+              "type": "number",
+              "description": "User's balance",
+              "example": 4000
+            }
         }
       },
       "TransactionCreateRequest": {
@@ -564,6 +574,11 @@
             "description": "Comment for transaction description",
             "example": "January salary"
           },
+          "balance": {
+            "type": "integer",
+            "description": "balance of user",
+            "example": 4000
+          },
           "owner": {
             "type": "string",
             "description": "User's id who creates this transaction",
@@ -595,7 +610,6 @@
             "category",
             "comment",
             "date",
-            "balance",
             "owner",
             "createdAt",
             "updatedAt",
@@ -629,11 +643,6 @@
               "type": "string",
               "description": "Transaction's create date",
               "example": "2021-02-01"
-            },
-            "balance": {
-              "type": "number",
-              "description": "User's balance after add transaction",
-              "example": 1000
             },
             "owner": {
               "type": "string",
