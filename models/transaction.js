@@ -5,29 +5,29 @@ const transactionSchema = new Schema(
   {
     amount: {
       type: Number,
-      require: true,
+      required: true,
       set: (data) => Number(data),
     },
     type: {
       type: Boolean ,
       enum: [true , false],
-      require: true,
+      required: true,
     },
     category: {
       type: String,
-      require: true,
+      required: true,
     },
     date: {
       type: String,
-      require: true,
+      required: true,
     },
     month: {
       type: Number,
-      require: true,
+      required: true,
     },
     year: {
       type: Number,
-      require: true,
+      required: true,
     },
     balance: {
       type: Number,

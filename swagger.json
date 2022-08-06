@@ -371,13 +371,13 @@
           "name": {
             "type": "string",
             "description": "User's name",
-            "example": "John"
+            "example": "Groot"
           },
           "email": {
             "type": "string",
             "description": "User's email",
             "format": "email",
-            "example": "example@gmail.com"
+            "example": "grootbatyakovich@gmail.com"
           },
           "password": {
             "type": "string",
@@ -403,7 +403,7 @@
           "name": {
             "type": "string",
             "description": "User's name",
-            "example": "John"
+            "example": "Groot"
           },
           "balance": {
             "type": "number",
@@ -420,7 +420,7 @@
             "type": "string",
             "description": "User's email",
             "format": "email",
-            "example": "example@gmail.com"
+            "example": "grootbatyakovich@gmail.com"
           },
           "password": {
             "type": "string",
@@ -501,9 +501,9 @@
             "example": "Regular income"
           },
           "amount": {
-            "type": "string",
+            "type": "number",
             "description": "Amount of transaction",
-            "example": "13000"
+            "example": 13000
           },
           "comment": {
             "type": "string",
