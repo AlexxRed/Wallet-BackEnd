@@ -304,7 +304,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionGetResponse"
+                  "$ref": "#/components/schemas/TransactionFilterResponse"
                 }
               }
             }
@@ -473,11 +473,11 @@
             "description": "User's id",
             "example": "123hndsadaJo231dsa1"
           },
-                      "balance": {
-              "type": "number",
-              "description": "User's balance",
-              "example": 4000
-            }
+          "balance": {
+            "type": "number",
+            "description": "User's balance",
+            "example": 4000
+          }
         }
       },
       "TransactionCreateRequest": {
@@ -602,71 +602,105 @@
         }
       },
       "TransactionGetResponse": {
-        "type": "array",
-        "items": {
-          "required": [
-            "amount",
-            "type",
-            "category",
-            "comment",
-            "date",
-            "owner",
-            "createdAt",
-            "updatedAt",
-            "year",
-            "month",
-            "id"
-          ],
-          "properties": {
-            "amount": {
-              "type": "number",
-              "description": "Amount of transaction",
-              "example": 500
-            },
-            "type": {
-
-                "type": "string",
-                "description": "Transaction's type",
-                "example": "income/expense"
-            },
-            "category": {
-              "type": "string",
-              "description": "Transaction's category",
-              "example": "Regular income"
-            },
-            "comment": {
-              "type": "string",
-              "description": "Comment for transaction description",
-              "example": "January salary"
-            },
-            "date": {
-              "type": "string",
-              "description": "Transaction's create date",
-              "example": "2021-02-01"
-            },
-            "owner": {
-              "type": "string",
-              "description": "User's id who creates this transaction",
-              "example": "61994b7dc2b3164f924883cc"
-            },
-            "year": {
-              "type": "integer",
-              "description": "Year when transaction was payed",
-              "example": 2022
-            },
-            "month": {
-              "type": "integer",
-              "description": "Month of year when transaction was payed",
-              "example": 2
-            },
-            "id": {
-              "type": "string",
-              "description": "Transaction's id",
-              "example": "61994e70df4763ac4010ed06"
-            }
+        "type": "object",
+        "required": ["totalPages", "data"],
+        "properties": {
+          "totalPages": {
+            "type": "number",
+            "description": "Total coun of page",
+            "example": 5
+          },
+          "data": {
+            "type": "array",
+            "description": "Total coun of page",
+            "example": [
+              {
+                "_id": "62ee6657695e5366d6a45150",
+                "amount": 114,
+                "type": true,
+                "category": "fsasfasf",
+                "date": "2022-08-01",
+                "month": 12,
+                "year": 3,
+                "comment": "zhdkdlsdggdsg",
+                "owner": {
+                  "_id": "62ee6615695e5366d6a45149",
+                  "name": "bohdan"
+                }
+              }
+            ]
           }
         }
       },
+
+      "TransactionFilterResponse": {
+        "type": "object",
+        "required": ["statistics", "income", "expenses"],
+        "properties": {
+          "statistics": {
+            "type": "array",
+            "description": " Category statistics ",
+            "example": [
+              {
+                "id": "1",
+                "name": "Basic expenses",
+                "total": 260
+              },
+              {
+                "id": "2",
+                "name": "Products",
+                "total": 130
+              },
+              {
+                "id": "3",
+                "name": "Car",
+                "total": 0
+              },
+              {
+                "id": "4",
+                "name": "Self care",
+                "total": 0
+              },
+              {
+                "id": "5",
+                "name": "Child care",
+                "total": 130
+              },
+              {
+                "id": "6",
+                "name": "Household products",
+                "total": 0
+              },
+              {
+                "id": "7",
+                "name": "Education",
+                "total": 130
+              },
+              {
+                "id": "8",
+                "name": "Leisure",
+                "total": 0
+              },
+              {
+                "id": "9",
+                "name": "Other expenses",
+                "total": 0
+              }
+            ]
+          },
+          "income": {
+            "type": "numner",
+            "description": "Income",
+            "example": "1040"
+          },
+          "expenses": {
+            "type": "numner",
+            "description": "Expenses",
+            "example": "650"
+          }
+        }
+      },
+
       "CategoriesRequest": {
         "type": "array",
         "items": {
