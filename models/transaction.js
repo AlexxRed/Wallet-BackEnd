@@ -9,8 +9,8 @@ const transactionSchema = new Schema(
       set: (data) => Number(data),
     },
     type: {
-      type: String,
-      enum: ["expense", "income"],
+      type: Boolean ,
+      enum: [true , false],
       require: true,
     },
     category: {
@@ -48,7 +48,7 @@ const Transaction = model("transaction", transactionSchema);
 const joiCreateTransaction = Joi.object({
   amount: Joi.number().required(),
   date: Joi.date().required(),
-  category: Joi.string().required(),
+  category: Joi.boolean().required(),
   comment: [Joi.string(), Joi.number()],
   type: Joi.string().required(),
 });

@@ -196,7 +196,7 @@
           }
         },
         "responses": {
-          "200": {
+          "201": {
             "description": "Successful operation",
             "content": {
               "application/json": {
@@ -472,18 +472,18 @@
       },
       "TransactionCreateRequest": {
         "type": "object",
-        "required": ["date", "type", "category", "amount"],
+        "required": ["date", "type", "category", "amount", "year", "month"],
         "optional": ["comment"],
         "properties": {
           "date": {
             "type": "string",
             "description": "Transaction's create date",
-            "example": "2021-02-01"
+            "example": "2022-01-01"
           },
           "type": {
-            "type": "string",
+            "type": "boolean",
             "description": "Transaction's type",
-            "example": "income/expense"
+            "example": true
           },
           "category": {
             "type": "string",
@@ -493,7 +493,7 @@
           "amount": {
             "type": "string",
             "description": "Amount of transaction",
-            "example": "500"
+            "example": "13000"
           },
           "comment": {
             "type": "string",
@@ -503,12 +503,12 @@
           "year": {
             "type": "integer",
             "description": "Year of transaction",
-            "example": 2021
+            "example": 2022
           },
           "month": {
             "type": "integer",
             "description": "Month of transaction",
-            "example": 2
+            "example": 1
           }
         }
       },
@@ -521,7 +521,6 @@
           "category",
           "comment",
           "date",
-          "balance",
           "owner",
           "createdAt",
           "updatedAt",
@@ -538,32 +537,42 @@
           "type": {
             "type": "string",
             "description": "Transaction's type",
-            "example": "income"
+            "example": true
           },
           "category": {
             "type": "string",
             "description": "Transaction's category",
             "example": "Regular income"
           },
-          "comment": {
-            "type": "string",
-            "description": "Comment for transaction description",
-            "example": "January salary"
-          },
           "date": {
             "type": "string",
             "description": "Transaction's create date",
             "example": "2021-02-01"
           },
-          "balance": {
-            "type": "number",
-            "description": "User's balance after add transaction",
-            "example": 1000
+          "month": {
+            "type": "integer",
+            "description": "Month of year when transaction was payed",
+            "example": 2
+          },
+          "year": {
+            "type": "integer",
+            "description": "Year when transaction was payed",
+            "example": 2022
+          },
+          "comment": {
+            "type": "string",
+            "description": "Comment for transaction description",
+            "example": "January salary"
           },
           "owner": {
             "type": "string",
             "description": "User's id who creates this transaction",
             "example": "61994b7dc2b3164f924883cc"
+          },
+          "_id": {
+            "type": "string",
+            "description": "Transaction's id",
+            "example": "61994e70df4763ac4010ed06"
           },
           "createdAt": {
             "type": "string",
@@ -574,21 +583,6 @@
             "type": "string",
             "description": "Time when transaction was updated on server",
             "example": "2021-11-20T19:37:20.178Z"
-          },
-          "year": {
-            "type": "integer",
-            "description": "Year when transaction was payed",
-            "example": 2022
-          },
-          "month": {
-            "type": "integer",
-            "description": "Month of year when transaction was payed",
-            "example": 2
-          },
-          "id": {
-            "type": "string",
-            "description": "Transaction's id",
-            "example": "61994e70df4763ac4010ed06"
           }
         }
       },
