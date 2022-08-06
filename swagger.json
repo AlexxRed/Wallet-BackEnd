@@ -304,7 +304,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionGetResponse"
+                  "$ref": "#/components/schemas/TransactionFilterResponse"
                 }
               }
             }
@@ -667,6 +667,75 @@
           }
         }
       },
+
+     "TransactionFilterResponse": {
+         "type": "object",
+        "required": ["statistics", "income", "expenses"],
+        "properties": {
+          "statistics": {
+            "type": "array",
+            "description": " Category statistics ",
+            "example": [
+              {
+                "id": "1",
+                "name": "Basic expenses",
+                "total": 260
+              },
+              {
+                "id": "2",
+                "name": "Products",
+                "total": 130
+              },
+              {
+                "id": "3",
+                "name": "Car",
+                "total": 0
+              },
+              {
+                "id": "4",
+                "name": "Self care",
+                "total": 0
+              },
+              {
+                "id": "5",
+                "name": "Child care",
+                "total": 130
+              },
+              {
+                "id": "6",
+                "name": "Household products",
+                "total": 0
+              },
+              {
+                "id": "7",
+                "name": "Education",
+                "total": 130
+              },
+              {
+                "id": "8",
+                "name": "Leisure",
+                "total": 0
+              },
+              {
+                "id": "9",
+                "name": "Other expenses",
+                "total": 0
+              }
+            ]
+          },
+          "income": {
+            "type": "numner",
+            "description": "Income",
+            "example": "1040"
+          },
+          "expenses": {
+            "type": "numner",
+            "description": "Expenses",
+            "example": "650"
+          }
+        }
+      },
+
       "CategoriesRequest": {
         "type": "array",
         "items": {
