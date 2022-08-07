@@ -503,7 +503,7 @@
           "amount": {
             "type": "number",
             "description": "Amount of transaction",
-            "example": 13000
+            "example": 100
           },
           "comment": {
             "type": "string",
