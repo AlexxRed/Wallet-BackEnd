@@ -6,8 +6,6 @@ const createTransaction = async (req, res) => {
   const { amount, type } = req.body;
 
   await Transaction.create({ ...req.body, owner });
-  
-  // console.log(result._id)
 
   let newBalance;
 
@@ -15,10 +13,9 @@ const createTransaction = async (req, res) => {
     newBalance = balance + amount;
   }
   if (!type) {
-    newBalance = balance + amount;
+    newBalance = balance - amount;
   }
   await User.findByIdAndUpdate(owner, { balance: newBalance });
-
 
   res.status(201).json({ ...req.body, owner, balance: newBalance });
 };
