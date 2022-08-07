@@ -5,7 +5,6 @@ const createTransaction = async (req, res) => {
   const { _id: owner, balance } = req.user;
   const { amount, type } = req.body;
 
-  console.log(balance);
   const {_id} = await Transaction.create({ ...req.body, owner });
 
   let newBalance;
