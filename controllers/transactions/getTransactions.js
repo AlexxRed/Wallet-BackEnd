@@ -31,7 +31,7 @@ const getTransaction = async (req, res, next) => {
     });
 
     const sorTransactions = sortTransactions.sort((a, b) => {
-      return b.filter - a.filter;
+      return a.filter - b.filter;
     });
 
     const result = sorTransactions.slice(start, end);
