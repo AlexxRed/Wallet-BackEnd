@@ -18,7 +18,7 @@ const getTransaction = async (req, res, next) => {
 
     const allData = await Transaction.find({ owner });
 
-    const totalPages = Math.round(allData.length / limit);
+    const totalPages = Math.ceil(allData.length / limit);
 
     const transactions = await Transaction.find(
       { owner },
