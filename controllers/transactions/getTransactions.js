@@ -34,7 +34,7 @@ const getTransaction = async (req, res, next) => {
       return b.filter - a.filter;
     });
 
-    const result = sorTransactions.slice(end, start);
+    const result = sorTransactions.slice(start, end);
 
     const data = {
       totalPages,
