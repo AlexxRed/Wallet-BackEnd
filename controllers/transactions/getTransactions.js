@@ -31,10 +31,10 @@ const getTransaction = async (req, res, next) => {
     });
 
     const sorTransactions = sortTransactions.sort((a, b) => {
-      return a.filter - b.filter;
+      return b.filter - a.filter;
     });
 
-    const result = sorTransactions.slice(start, end);
+    const result = sorTransactions.slice(end, start);
 
     const data = {
       totalPages,
