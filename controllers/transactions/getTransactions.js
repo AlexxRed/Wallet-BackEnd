@@ -38,7 +38,7 @@ const getTransaction = async (req, res, next) => {
 
     const data = {
       totalPages,
-      data: result
+      data: result.reverse()
     };
     res.json(data);
   } catch (error) {
