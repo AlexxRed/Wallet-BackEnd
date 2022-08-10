@@ -36,12 +36,11 @@ const getTransaction = async (req, res, next) => {
 
     const result = sorTransactions.slice(start, end);
 
-    const obj = {
+    const data = {
       totalPages,
       data: result
     };
-    
-    res.json(obj);
+    res.json(data);
   } catch (error) {
     next(error);
   }
