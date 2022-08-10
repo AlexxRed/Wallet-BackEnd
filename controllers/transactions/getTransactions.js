@@ -38,12 +38,28 @@ const getTransaction = async (req, res, next) => {
 
     const data = {
       totalPages,
-      data: result,
+      data: result.reverse(),
     };
     res.json(data);
   } catch (error) {
     next(error);
   }
+
 };
 
 module.exports = getTransaction;
+
+
+//   const getTransactions = async (req, res) => {
+//   try {
+//     const userId = req.user._id;
+//     const data = await Transaction.listTransactions(userId, req.query);
+//     return res.json({
+//       status: "success",
+//       code: HttpCode.OK,
+//       data: { ...data },
+//     });
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// };
