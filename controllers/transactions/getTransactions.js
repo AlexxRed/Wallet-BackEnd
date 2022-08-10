@@ -36,11 +36,12 @@ const getTransaction = async (req, res, next) => {
 
     const result = sorTransactions.slice(start, end);
 
-    const data = {
+    const obj = {
       totalPages,
       data: result.reverse()
     };
-    res.json(data);
+    
+    res.json(obj);
   } catch (error) {
     next(error);
   }
